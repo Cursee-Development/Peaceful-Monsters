@@ -1,6 +1,0 @@
-accessWidener v1 named
-
-accessible field net/minecraft/world/DifficultyInstance base Lnet/minecraft/world/Difficulty;
-mutable field net/minecraft/world/DifficultyInstance base Lnet/minecraft/world/Difficulty;
-
-accessible field net/minecraft/world/entity/ai/goal/MeleeAttackGoal mob Lnet/minecraft/world/entity/PathfinderMob;
