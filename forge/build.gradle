@@ -1,11 +1,10 @@
 plugins {
     id 'multiloader-loader'
     id 'net.minecraftforge.gradle' version '[6.0.24,6.2)'
-    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
     id 'org.spongepowered.mixin' version '0.7-SNAPSHOT'
 }
 base {
-    archivesName = "${mod_id}-forge-${minecraft_version}"
+    archivesName = "${mod_name}-forge-${minecraft_version}"
 }
 mixin {
     config("${mod_id}.mixins.json")
@@ -18,8 +17,7 @@ jar {
 }
 
 minecraft {
-    // mappings channel: 'official', version: minecraft_version
-    mappings channel: 'parchment', version: "${parchment_version}-${minecraft_version}"
+    mappings channel: 'official', version: minecraft_version
 
     copyIdeResources = true //Calls processResources when in dev
 
@@ -79,8 +77,14 @@ dependencies {
 
     // Forge's hack fix
     implementation('net.sf.jopt-simple:jopt-simple:5.0.4') { version { strictly '5.0.4' } }
+}
 
-    implementation "curse.maven:monolib-968432:6123982"
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            fg.component(it)
+        }
+    }
 }
 
 sourceSets.each {

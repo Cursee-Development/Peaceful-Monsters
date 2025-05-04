@@ -1,7 +1,6 @@
 package com.cursee.peaceful_monsters;
 
 import com.cursee.peaceful_monsters.core.registry.RegistryForge;
-import com.cursee.monolib.core.sailing.Sailing;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -13,7 +12,6 @@ public class PeacefulMonstersForge {
     
     public PeacefulMonstersForge(FMLJavaModLoadingContext context) {
         PeacefulMonsters.init();
-        Sailing.register(Constants.MOD_ID, Constants.MOD_NAME, Constants.MOD_VERSION, Constants.MOD_PUBLISHER, Constants.MOD_URL);
         PeacefulMonstersForge.EVENT_BUS = context.getModEventBus();
         RegistryForge.register(PeacefulMonstersForge.EVENT_BUS);
     }

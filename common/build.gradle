@@ -4,16 +4,14 @@ plugins {
 }
 
 neoForge {
-    // This is the version of minecraft that the 'common' project uses, you can find a list of all versions here
-    // https://projects.neoforged.net/neoforged/neoform
-    neoFormVersion = '1.21.1-20240808.144430'
+    neoFormVersion = neo_form_version
     // Automatically enable AccessTransformers if the file exists
-    def at = file('src/main/resources/META-INF/neoaccesstransformer.cfg')
+    def at = file('src/main/resources/META-INF/accesstransformer.cfg')
     if (at.exists()) {
         accessTransformers.from(at.absolutePath)
     }
     parchment {
-        minecraftVersion = minecraft_version
+        minecraftVersion = parchment_minecraft
         mappingsVersion = parchment_version
     }
 }

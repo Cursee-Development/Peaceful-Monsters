@@ -36,10 +36,6 @@ pluginManagement {
                 includeGroupAndSubgroups('net.minecraftforge')
             }
         }
-        maven {
-            name = 'ParchmentMC'
-            url = 'https://maven.parchmentmc.org'
-        }
     }
 }
 
@@ -48,7 +44,7 @@ plugins {
 }
 
 // This should match the folder name of the project, or else IDEA may complain (see https://youtrack.jetbrains.com/issue/IDEA-317606)
-rootProject.name = 'Peaceful-Monsters'
+rootProject.name = 'MultiLoader-Template'
 include('common')
 include('fabric')
 include('neoforge')
