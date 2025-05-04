@@ -9,10 +9,17 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(Level.class)
 public class NeoForgeLevelMixin {
 
-    @Redirect(method = "setSpawnSettings", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/chunk/ChunkSource;setSpawnSettings(ZZ)V"))
-    private void peaceful_monsters$setSpawnSettingsInject(ChunkSource instance, boolean pHostile, boolean pPeaceful) {
+//    @Redirect(method = "setSpawnSettings", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/chunk/ChunkSource;setSpawnSettings(ZZ)V"))
+//    private void peaceful_monsters$setSpawnSettingsInject(ChunkSource instance, boolean pHostile, boolean pPeaceful) {
+//        // instance.setSpawnSettings(pHostile, false);
+//        Level level = (Level) (Object) this;
+//        level.getChunkSource().setSpawnSettings(true, true);
+//    }
+
+    @Redirect(method = "setSpawnSettings", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/chunk/ChunkSource;setSpawnSettings(Z)V"))
+    private void peaceful_monsters$setSpawnSettingsInject(ChunkSource instance, boolean pHostile) {
         // instance.setSpawnSettings(pHostile, false);
         Level level = (Level) (Object) this;
-        level.getChunkSource().setSpawnSettings(true, true);
+        level.getChunkSource().setSpawnSettings(true);
     }
 }
