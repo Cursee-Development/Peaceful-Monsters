@@ -4,7 +4,12 @@
   "package": "com.cursee.peaceful_monsters.mixin",
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": [
+    "FabricBaseSpawnerMixin",
+    "FabricLevelMixin",
+    "FabricMeleeAttackGoalMixin",
+    "FabricMonsterMixin"
+  ],
   "client": [],
   "server": [],
   "injectors": {

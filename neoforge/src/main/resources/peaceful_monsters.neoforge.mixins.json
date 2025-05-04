@@ -3,7 +3,12 @@
   "minVersion": "0.8",
   "package": "com.cursee.peaceful_monsters.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": [
+    "NeoForgeBaseSpawnerMixin",
+    "NeoForgeLevelMixin",
+    "NeoForgeMeleeAttackGoalMixin",
+    "NeoForgeMonsterMixin"
+  ],
   "client": [],
   "server": [],
   "injectors": {
