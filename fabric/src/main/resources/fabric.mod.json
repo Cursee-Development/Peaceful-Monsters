@@ -16,10 +16,10 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.cursee.examplemod.ExampleModFabric"
+            "com.cursee.peaceful_monsters.PeacefulMonstersFabric"
         ],
         "client": [
-            "com.cursee.examplemod.ExampleModClientFabric"
+            "com.cursee.peaceful_monsters.PeacefulMonstersClientFabric"
         ]
     },
     "mixins": [
