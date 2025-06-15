@@ -81,8 +81,6 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
-
-    implementation fg.deobf("curse.maven:monolib-968432:6123976")
 }
 
 tasks.withType(JavaCompile).configureEach {

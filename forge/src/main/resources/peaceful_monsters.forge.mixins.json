@@ -8,13 +8,11 @@
         "ForgeBaseSpawnerMixin",
         "ForgeLevelMixin",
         "ForgeMeleeAttackGoalMixin",
-        "ForgeMonsterMixin"
+        "ForgeMonsterMixin",
+        "ForgeNearestAttackableTargetGoalMixin"
     ],
-    "client": [
-        "ForgeTitleScreenMixin"
-    ],
-    "server": [
-    ],
+    "client": [],
+    "server": [],
     "injectors": {
         "defaultRequire": 1
     }

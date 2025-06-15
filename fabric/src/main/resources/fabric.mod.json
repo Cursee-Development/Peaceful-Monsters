@@ -17,9 +17,6 @@
     "entrypoints": {
         "main": [
             "com.cursee.peaceful_monsters.PeacefulMonstersFabric"
-        ],
-        "client": [
-            "com.cursee.peaceful_monsters.PeacefulMonstersClientFabric"
         ]
     },
     "mixins": [

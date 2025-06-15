@@ -8,13 +8,11 @@
         "FabricBaseSpawnerMixin",
         "FabricLevelMixin",
         "FabricMeleeAttackGoalMixin",
-        "FabricMonsterMixin"
+        "FabricMonsterMixin",
+        "FabricNearestAttackableTargetGoalMixin"
     ],
-    "client": [
-        "FabricTitleScreenMixin"
-    ],
-    "server": [
-    ],
+    "client": [],
+    "server": [],
     "injectors": {
       "defaultRequire": 1
     }

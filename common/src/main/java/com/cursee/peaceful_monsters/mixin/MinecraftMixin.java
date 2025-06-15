@@ -1,7 +1,5 @@
 package com.cursee.peaceful_monsters.mixin;
 
-import com.cursee.peaceful_monsters.Constants;
-import com.cursee.peaceful_monsters.platform.Services;
 import net.minecraft.client.Minecraft;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -13,10 +11,6 @@ public class MinecraftMixin {
     
     @Inject(at = @At("TAIL"), method = "<init>")
     private void init(CallbackInfo info) {
-
-        if (Services.PLATFORM.isDevelopmentEnvironment()) {
-            Constants.LOG.info("This line is printed by an example mod common mixin!");
-            Constants.LOG.info("MC Version: {}", Minecraft.getInstance().getVersionType());
-        }
+        // placeholder mixin, no operation
     }
 }

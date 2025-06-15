@@ -22,9 +22,9 @@ public class FabricMeleeAttackGoalMixin {
         if (level == null) return;
         Difficulty difficulty = level.getDifficulty();
 
-
-        // can continue attack if not attacking a player, or attacking a player that is neither in spectator/creative mode nor playing on Peaceful
-        // cir.setReturnValue(difficulty != Difficulty.PEACEFUL && ());
-        if (cir.getReturnValue()) cir.setReturnValue(difficulty != Difficulty.PEACEFUL);
+        if (cir.getReturnValue()){
+            cir.setReturnValue(difficulty != Difficulty.PEACEFUL);
+            instance.stop();
+        }
     }
 }
